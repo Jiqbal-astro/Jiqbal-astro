@@ -91,6 +91,7 @@
     }
   </style>
 </head>
+
 <body>
 <header class="site-header">
   <div class="nav-inner">
@@ -130,10 +131,10 @@
     {
       title: "Are We Alone? The Search for Life in the Vast Cosmos",
       date: "2025-03-12",
-      prettyDate: "7 March 2025",
+      prettyDate: "12 March 2025",
       tags: ["exoplanets", "astrobiology", "JWST", "habitability"],
       summary: "A deep exploration of how JWST studies exoplanet atmospheres, how biosignatures form, and what modern astronomy tells us about the possibility of life beyond Earth.",
-      link: "posts/are-we-alone.html"
+      link: "/blog/posts/are-we-alone.html"
     },
     {
       title: "Transit Photometry: How We Detect Distant Worlds",
@@ -141,7 +142,7 @@
       prettyDate: "10 March 2025",
       tags: ["exoplanets", "transit photometry"],
       summary: "An accessible explanation of how tiny dips in starlight reveal planets around distant stars.",
-      link: "posts/transit-photometry.html"
+      link: "/blog/posts/transit-photometry.html"
     },
     {
       title: "Understanding Galactic H I 21 cm Emission",
@@ -149,7 +150,7 @@
       prettyDate: "12 March 2025",
       tags: ["radio astronomy", "HI 21cm", "galactic structure"],
       summary: "A student-friendly guide to how neutral hydrogen traces the structure and kinematics of the Milky Way.",
-      link: "posts/galactic-hi.html"
+      link: "/blog/posts/galactic-hi.html"
     }
   ];
 
@@ -168,7 +169,7 @@
 
         const meta = document.createElement("p");
         meta.className = "pub-meta";
-        meta.textContent = post.prettyDate + (post.tags && post.tags.length ? " · " + post.tags.join(", ") : "");
+        meta.textContent = post.prettyDate + (post.tags?.length ? " · " + post.tags.join(", ") : "");
 
         const summary = document.createElement("p");
         summary.className = "muted";
@@ -195,5 +196,6 @@
 
   document.addEventListener("DOMContentLoaded", renderBlog);
 </script>
+
 </body>
 </html>
